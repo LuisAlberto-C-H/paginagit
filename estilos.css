@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:wght@100;300;500;900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family:'Source Sans Pro', sans-serif;;
+}
+
+
+/* .slideshow-container{
+    max-width: 1000px;
+    position:relative;
+    margin:auto;
+   }
+
+   .mySlides{
+    display:none;
+   }
+
+   .prev, .next{
+    cursor:pointer;
+    position:absolute;
+    top:50%;
+    width:auto;
+    margin-top:-22px;
+    padding:16px;
+    color:white;
+    font-weight:bold;
+    font-size:18px;
+    transition:0.6s ease;
+    border-radius:0 3px 3px 0;
+   } */
+
+   .next{
+    right:0;
+    border-radius:3px 0 0 3px;
+   }
+
+   .prev:hover, .next:hover{
+    background-color:rgba(0,0,0,0.8);
+   }
+
+   .text{
+    color:#f2f2f2;
+    font-size:15px;
+    padding:8px 12px;
+    position:absolute;
+    bottom:8px;
+    width:100%;
+    text-align:center;
+   }
+   
+   .numbertext{
+    color:#f2f2f2;
+    font-size:12px;
+    padding:8px 12px;
+    position:absolute;
+    top:0;
+   }
+
+   .fade{
+    -webkit-animation-name:fade;
+    -webkit-animation-duration:1.5s;
+    animation-name:fade;
+    animation-duration:1.5s;
+   }
+   
+   @-webkit-keyframes fade{
+    from{opacity:.4}
+    to{opacity:1}
+   }
+   
+   @keyframes fade{
+    from{opacity:.4}
+    to{opacity:1}
+   }
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(70deg, #192e5b, #1d65a6, #f2a104);
+    box-shadow: 0 4px 25px -22px black;
+    z-index: 2; 
+}
+
+.header-content{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    height: 80px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.logo h1 b{
+    color: #ffffff;
+}
+
+.logozoo{
+    color: #ffff;
+}
+
+.menu{
+    height: 80px;
+}
+
+.menu nav{
+    height: 100%;
+}
+
+.menu nav ul{
+    height: 100%;
+    display: flex;
+    list-style: none;
+}
+
+.menu nav ul li{
+
+    height: 100%;
+    margin: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.menu-selected:before{
+    content: '' ;
+    width: 100%;
+    height: 4px;
+    background: #46a2fd;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu nav ul li a{
+    color: #ffff;
+    font-size: 18px;
+    transition: color 300ms;
+} 
+
+.menu nav ul li a:hover{
+    color: #46a2fd;
+} 
+
+.menu .text-menu-selected{
+    color: #46a2fd;
+}
+
+/*Portada*/
+
+.container-cover{
+    width: 100%;
+    height: 350px; /*este lo cambié de él de 500px a 350px*/
+    position: relative;
+    margin-top: 70px;
+    background-image: url(imagenes/elefante1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+
+
+ .container-cover:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    /* background: rgba(38, 172, 255, 0.8); */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* .container-info-cover{
+    max-width: 800px;
+    height: 350px; 
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+} */
+
+/* .container-info-cover h1{
+    font-size: 60px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.container-info-cover p{
+color: #fff;
+font-size: 20px;
+font-weight: 300;
+} */
+
+
+/*contenedor - contenido del articulo*/
+
+.container-content{
+    width: 800px;  /* Este lo achiqué de él de 1200px a 80px*/
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    background-color: #ffff;
+}
+
+article{
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 40px;
+    box-shadow: -10px 0 20px -30px black;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+  }
+
+article:before{
+    content: '';
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #46a2fd;
+}
+
+article h1{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+article p{
+    margin-top: 20px;
+    font-size: 18px;
+    color: #3c3c3c;
+}
+
+article img{
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Aside de los articulos relacionados*/
+
+.container-aside aside{
+    width: 320px;
+    box-shadow: 0 0 20px -20px black;
+    background-color: #ffff;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+
+}
+
+.container-aside aside img{
+    width: 100%;
+}
+
+.container-aside aside h2,
+.container-aside aside p{
+    margin-top: 20px;
+    padding: 0px 20px;
+}
+
+.container-aside aside button{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 50px;
+    font-size: 16px;
+    background: #46a2fd;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/*footer - pie de página*/
+
+.container-footer{
+    width: 100%;
+    /* padding: 40px 0; */
+    background: #00743f;
+    /* margin-top: 40px; */
+}
+
+.container-footer footer{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container-footer footer .logo-footer{
+    text-align: center;
+}
+
+.container-footer footer .logo-footer img{
+width: 100px;
+border-radius: 46%;
+}
+
+.container-footer footer .redes-footer{
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
+}
+
+.container-footer footer .redes-footer .icons-redes-footer{
+    font-size: 20px;
+    margin: 20px;
+    background: #efefef;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: #a2a2a2;
+}
+
+footer .redes-footer .fa-square-facebook:hover{
+    background: #41579a;
+    color: #fff;
+}
+
+footer .redes-footer .fa-twitter:hover{
+    background: #3ec4e3;
+    color: #fff;
+}
+
+footer .redes-footer .fa-instagram:hover{
+    background: linear-gradient(to top right, #fcde30, #e9712a, #d2313b, #ae4198, #7540a1, #5443ab);
+    color: #fff;
+}
+
+.container-footer footer hr{
+    margin-top: 20px;
+    border: none;
+    height: 2px;
+    background: #c0c0c07a;
+}
+
+.container-footer h4{
+    text-align: center;
+    margin-top: 40px;
+    color: #8e8e8e;
+    font-weight: 500;
+}
